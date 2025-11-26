@@ -30,7 +30,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git add Data.csv
           git commit -m "Update data" || echo "No changes"
-          git push origin HEAD:main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+
 
