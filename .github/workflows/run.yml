@@ -24,11 +24,13 @@ jobs:
       - name: Run script
         run: python Bazaar.py
 
-      - name: Commit results
+      - name: Commit & push CSV
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Data.csv
           git commit -m "Update data" || echo "No changes"
-          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
