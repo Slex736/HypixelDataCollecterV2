@@ -44,9 +44,6 @@ if data.get("success"):
 
                 ProductStats.append([price])
 
-
-
-    print(ProductStats)
 else:
     print("API error:", data)
 

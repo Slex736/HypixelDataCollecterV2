@@ -23,10 +23,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bazaar.py" />
+    <Compile Include="BazaarAllitems.py" />
     <Compile Include="DataCollecter.py" />
+    <Compile Include="HeaderMaker.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data.csv" />
+    <Content Include="DataAllitems.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
